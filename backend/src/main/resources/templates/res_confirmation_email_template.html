@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body style="font-family: sans-serif; color: #333; line-height: 1.6; background-color: #f4f4f4;">
+    <div style="max-width: 600px; margin: 30px auto; background: white; border-radius: 8px; padding: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px;">
+            Reservation Confirmation
+        </h2>
+        <p>
+            Thank you for your reservation! Your stalls for <strong>Book Fair 2026</strong> are ready. Here are the details:
+        </p>
+        <ul style="list-style: none; padding: 0;">
+            <li th:each="res : ${reservations}" style="margin-bottom: 10px; padding: 10px; border: 1px solid #eee; border-radius: 5px;">
+                <p style="font-weight: bold; border-bottom: 1px solid #eee; padding-bottom: 5px;">
+                    <span th:text="${res.stall.name}">Stall Name</span>
+                    <small style="color: #999; float: right;" th:text="${'#' + res.id}">#1</small>
+                </p>
+            </li>
+        </ul>
+        <div style="margin-top: 20px;">
+            <p style="font-size: 11px; text-align: center; margin-top: 20px; color: #aaa;">
+                This is an automated confirmation email.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
