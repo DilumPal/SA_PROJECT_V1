@@ -4,8 +4,8 @@ import LoginPage from './pages/LoginPage'
 import StallMapPage from './pages/StallMapPage'
 import HomePage from './pages/HomePage'
 import EmployeePortalPage from './pages/EmployeePortalPage'
-import Layout from './components/Layout'
-import EmployeeLayout from './components/EmployeeLayout'
+import Layout from './Components/Layout'
+import EmployeeLayout from './Components/EmployeeLayout'
 import { useAuth } from './context/AuthContext'
 
 /**
